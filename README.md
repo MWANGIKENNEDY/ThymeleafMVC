@@ -1,0 +1,1 @@
+This is a Spring MVC project using Thymeleaf:
