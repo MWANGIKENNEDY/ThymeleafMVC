@@ -13,10 +13,68 @@
 <body>
 
 
-<h1>thymeleaf</h1>
-
-
-<a class="waves-effect waves-light btn">button</a>
+<div th:switch="${users}">
+    
+    <h3 th:case="0">No users added..</h3>
+    
+    <div th:case="*">
+        
+        <h2>Users</h2>
+        
+        <table>
+            
+            <thead>
+                
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        First name
+                    </th>
+                    <th>
+                        Surname
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Mobile number
+                    </th>
+                    <th>
+                        Password
+                    </th>
+                      <th>
+                        D O B
+                    </th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                
+                <tr th:each="user:${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.firstname}"></td>
+                    <td th:text="${user.surname}"></td>
+                    <td th:text="${user.gender}"></td>
+                    <td th:text="${user.mobilenumber}"></td>
+                    <td th:text="${user.password}"></td>
+                    <td th:text="${user.dob}"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
 
 </body>
 </html>
