@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -13,20 +13,26 @@
     <title>Title</title>
 </head>
 <body>
-
-
-<div th:switch="${users}">
-    
-    <h3 th:case="0">No users added..</h3>
-    
-    <div th:case="*">
+    <div class="bg-image">
         
-        <h2>Users</h2>
+    <div class="topbar">
+       <h2 style="margin:0">Some text</h2>  
+    </div>
         
-        <table>
+        
+        
+   
+        
+        
+        <div class="grid-container">
             
+            <div class="grid-item">
+                       <div th:switch="${users}">
+    <div th:case="0">No users added..</div>
+    <div th:case="*">
+        <h2>Users</h2>
+        <table>
             <thead>
-                
                 <tr>
                     <th>
                         ID
@@ -51,9 +57,7 @@
                     </th>
                 </tr>
             </thead>
-            
             <tbody>
-                
                 <tr th:each="user:${users}">
                     <td th:text="${user.id}"></td>
                     <td th:text="${user.firstname}"></td>
@@ -62,21 +66,21 @@
                     <td th:text="${user.mobilenumber}"></td>
                     <td th:text="${user.password}"></td>
                     <td th:text="${user.dob}"></td>
-                    
                 </tr>
             </tbody>
-        </table>
-        
-        
-        
-        
+        </table>     
     </div>
-    
-    
-    
-    
-    
-</div>
-
+</div> 
+            </div>
+            
+                <div class="grid-item">
+                Left NAVIGATION
+            </div>
+        
+ 
+            
+            
+        </div>
+    </div>
 </body>
 </html>

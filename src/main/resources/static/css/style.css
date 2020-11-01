@@ -7,9 +7,33 @@ and open the template in the editor.
     Created on : Oct 28, 2020, 3:19:52 AM
     Author     : user
 */
-body,html{
+body{
+    color: white;
+    margin: 0;
+}
+
+.topbar{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-image{
+    background-image: url("/images/bg2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns:70% auto;
     background-color: teal;
-    height: 100%;
-    margin: 25;
-    
+    padding: 10px;
+}
+
+.grid-item{
+    background-color: green;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
 }
