@@ -1,39 +1,91 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Oct 28, 2020, 3:19:52 AM
-    Author     : user
-*/
-body{
-    color: white;
-    margin: 0;
-}
-
-.topbar{
+body,html{
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-.bg-image{
-    background-image: url("/images/bg2.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
+.site{
+    height: 100%;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-columns:70% auto;
-    background-color: teal;
-    padding: 10px;
+/*Top navigation*/
+.topnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.topnav li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-bottom: 1px solid green;
+    border-right: 1px solid green;
+    line-height: 60px;
+}
+.topnav li a:hover{
+    background: gray;
 }
 
-.grid-item{
-    background-color: green;
-    border: 1px solid black;
-    padding: 20px;
-    text-align: center;
+/*Side navigation*/
+.sidenav{
+    height: 100%;
 }
+
+.sidenav ul{
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.sidenav li a{
+    line-height: 60px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid gray;
+    border-left: 3px solid cyan;
+}
+
+.sidenav li a:hover{
+    background: grey;
+}
+
+@media screen and (min-width:30em){
+    .site{
+        height: 100%;
+        max-width: 65em;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:'top top'
+                            'left main';       
+        grid-template-columns:1fr 2fr;
+        grid-template-rows: auto 1fr;
+    }
+    
+    .top{
+               grid-area:top;
+    }
+    .topnav ul{
+        display: flex; 
+        justify-content: space-between;
+ 
+    }
+    .sidenav{
+        height: 100%;
+    } 
+    
+    
+    .side{
+   
+        grid-area:left;
+    }
+    
+    .footer{
+        grid-area:footer;
+    }
+    }
+    
+

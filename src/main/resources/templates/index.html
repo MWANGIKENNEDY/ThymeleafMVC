@@ -1,86 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns:th="https://thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    
     <link rel="stylesheet" th:href="@{/css/style.css}">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Title</title>
 </head>
 <body>
-    <div class="bg-image">
-        
-    <div class="topbar">
-       <h2 style="margin:0">Some text</h2>  
+
+    <div class="site">
+        <div class="top">
+                        <div class="topnav">
+      <ul>
+        <li>
+          <a href="#">
+              Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+
+        <li>
+          <a href="#">Features</a>
+        </li>
+
+        <li>
+          <a href="#">Normal User</a>
+        </li>
+
+        <li>
+          <a href="#">Admin</a>
+        </li>
+      </ul>
     </div>
-        
-        
-        
-   
-        
-        
-        <div class="grid-container">
             
-            <div class="grid-item">
-                       <div th:switch="${users}">
-    <div th:case="0">No users added..</div>
-    <div th:case="*">
-        <h2>Users</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        ID
-                    </th>
-                    <th>
-                        First name
-                    </th>
-                    <th>
-                        Surname
-                    </th>
-                    <th>
-                        Gender
-                    </th>
-                    <th>
-                        Mobile number
-                    </th>
-                    <th>
-                        Password
-                    </th>
-                      <th>
-                        D O B
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="user:${users}">
-                    <td th:text="${user.id}"></td>
-                    <td th:text="${user.firstname}"></td>
-                    <td th:text="${user.surname}"></td>
-                    <td th:text="${user.gender}"></td>
-                    <td th:text="${user.mobilenumber}"></td>
-                    <td th:text="${user.password}"></td>
-                    <td th:text="${user.dob}"></td>
-                </tr>
-            </tbody>
-        </table>     
+        </div>
+
+        <div class="side">
+            
+                <div class="sidenav">
+      <ul>
+        <li>
+          <a href="#">
+              Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+
+        <li>
+          <a href="#">Features</a>
+        </li>
+
+        <li>
+          <a href="#">Normal User</a>
+        </li>
+
+        <li>
+          <a href="#">Admin</a>
+        </li>
+      </ul>
+
     </div>
-</div> 
-            </div>
-            
-                <div class="grid-item">
-                Left NAVIGATION
-            </div>
-        
- 
             
             
         </div>
+        
     </div>
+       
 </body>
 </html>

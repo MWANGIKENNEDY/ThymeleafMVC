@@ -9,10 +9,7 @@ import com.saf.portal.models.Users;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author user
- */
+
 @Service
 public interface UserService {
     public void registerUser(Users users);

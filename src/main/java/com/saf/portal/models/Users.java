@@ -22,7 +22,6 @@ public class Users implements Serializable {
     Long id;
     int mobilenumber;
     String firstname,surname,gender,password,dob;
-
     public Long getId() {
         return id;
     }
